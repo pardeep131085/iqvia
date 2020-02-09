@@ -41,4 +41,34 @@
 Response
 "ACCEPTED" if message is scheduled or "INTERNAL SERVER ERROR" if message is not scheduled.
 
+**Screen shots**
 
+How to start application
+
+![alt start app](https://github.com/pardeep131085/iqvia/blob/master/src/main/resources/screenshots/start_app.png)
+
+Successful application log
+
+![alt start app](https://github.com/pardeep131085/iqvia/blob/master/src/main/resources/screenshots/start_app_logs.png)
+
+Request 1
+
+![alt start app](https://github.com/pardeep131085/iqvia/blob/master/src/main/resources/screenshots/request1.png)
+
+Request 1 log
+
+![alt start app](https://github.com/pardeep131085/iqvia/blob/master/src/main/resources/screenshots/request1_log.png)
+
+
+Request 2
+
+![alt start app](https://github.com/pardeep131085/iqvia/blob/master/src/main/resources/screenshots/request2.png)
+
+Request 2 log
+
+![alt start app](https://github.com/pardeep131085/iqvia/blob/master/src/main/resources/screenshots/request2_log.png)
+
+
+Response on console
+
+![alt start app](https://github.com/pardeep131085/iqvia/blob/master/src/main/resources/screenshots/response.png)
