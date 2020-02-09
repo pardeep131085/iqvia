@@ -28,14 +28,12 @@ public class MessageController {
 	@PostMapping(path = "/schedule", produces = "application/json", consumes = "application/json")
 	public HttpStatus scheduleMessage(@RequestBody MessageInput input) {
 
-		try {
-			this.messageService.scheduleMessage(input.getTimestamp(), input.getContent());
-		} catch (SchedulerException e) {
-			e.printStackTrace();
-			return HttpStatus.INTERNAL_SERVER_ERROR;			
+		Boolean isScheduled = this.messageService.scheduleMessage(input.getTimestamp(), input.getContent());
+		if (!isScheduled) {
+			return HttpStatus.INTERNAL_SERVER_ERROR;
 		}
 
 		return HttpStatus.ACCEPTED;
 	}
-	
+
 }

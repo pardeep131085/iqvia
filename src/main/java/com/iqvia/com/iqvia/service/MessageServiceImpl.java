@@ -31,7 +31,7 @@ public class MessageServiceImpl implements MessageService {
 	@Autowired
 	private JobDetailFactoryBean detailFactoryBean;
 	@Override
-	public void scheduleMessage(String timestamp, String content) throws SchedulerException {
+	public boolean scheduleMessage(String timestamp, String content) {
 
 		LocalDateTime dateTime = LocalDateTime.parse(timestamp);
 		Date date = Date.from(dateTime.atZone(ZoneId.systemDefault()).toInstant());
@@ -41,12 +41,19 @@ public class MessageServiceImpl implements MessageService {
 				.withIdentity("messageTrigger" + LocalDateTime.now()).startAt(date).build();
 
 		Date ft = null;
-		if (this.schedulerFactoryBean.getScheduler().checkExists(detailFactoryBean.getObject().getKey())) {
-			ft = this.schedulerFactoryBean.getScheduler().scheduleJob(trigger);
-		} else
-			ft = this.schedulerFactoryBean.getScheduler().scheduleJob(detailFactoryBean.getObject(), trigger);
+		try {
+			if (this.schedulerFactoryBean.getScheduler().checkExists(detailFactoryBean.getObject().getKey())) {
+				ft = this.schedulerFactoryBean.getScheduler().scheduleJob(trigger);
+			} else
+				ft = this.schedulerFactoryBean.getScheduler().scheduleJob(detailFactoryBean.getObject(), trigger);
+		} catch (SchedulerException e) {
+			LOG.error(e.getMessage());
+			return false;
+		}
 
 		LOG.info(detailFactoryBean.getObject().getDescription() + " has been scheduled to run at: " + ft);
+		
+		return true;
 
 	}
 

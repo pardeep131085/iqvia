@@ -9,5 +9,5 @@ import org.quartz.SchedulerException;
  *
  */
 public interface MessageService {
-	public void scheduleMessage(String timestamp, String content) throws SchedulerException;
+	public boolean scheduleMessage(String timestamp, String content);
 }
