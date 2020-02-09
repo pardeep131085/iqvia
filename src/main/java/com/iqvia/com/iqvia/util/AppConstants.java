@@ -1,7 +1,9 @@
 package com.iqvia.com.iqvia.util;
 
 /**
- * Class for storing constants
+ * <p>
+ * Constants class
+ * </p>
  * 
  * @author Pardeep
  *

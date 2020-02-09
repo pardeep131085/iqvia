@@ -12,8 +12,10 @@ import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 import com.iqvia.com.iqvia.job.MessageJob;
 
 /**
+ * <p>
  * Configuration file for config application context, creating
  * SchedulerFactoryBean bean and other required beans
+ * </p>
  * 
  * @author Pardeep
  *

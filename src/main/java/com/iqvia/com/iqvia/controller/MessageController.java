@@ -11,7 +11,9 @@ import com.iqvia.com.iqvia.modal.MessageInput;
 import com.iqvia.com.iqvia.service.MessageService;
 
 /**
- * Entry point to Message Scheduler
+ * <p>
+ * Message Scheduler responsible for handling Request
+ * </p>
  * 
  * @author Pardeep
  *

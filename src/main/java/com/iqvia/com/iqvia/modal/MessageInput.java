@@ -1,7 +1,9 @@
 package com.iqvia.com.iqvia.modal;
 
 /**
- * Message Input
+ * <p>
+ * Request Input modal
+ * </p>
  * 
  * @author Pardeep
  *
@@ -10,7 +12,7 @@ public class MessageInput {
 
 	private String content;
 
-	// 2015-02-20T06:30:00
+	// format: 2015-02-20T06:30:00
 	private String timestamp;
 
 	public MessageInput() {

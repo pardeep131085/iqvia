@@ -17,7 +17,9 @@ import org.springframework.stereotype.Service;
 import com.iqvia.com.iqvia.util.AppConstants;
 
 /**
+ * <p>
  * Implementation of Service class
+ * </p>
  * 
  * @author Pardeep
  *
@@ -30,6 +32,7 @@ public class MessageServiceImpl implements MessageService {
 	private SchedulerFactoryBean schedulerFactoryBean;
 	@Autowired
 	private JobDetailFactoryBean detailFactoryBean;
+
 	@Override
 	public boolean scheduleMessage(String timestamp, String content) {
 
@@ -52,7 +55,7 @@ public class MessageServiceImpl implements MessageService {
 		}
 
 		LOG.info(detailFactoryBean.getObject().getDescription() + " has been scheduled to run at: " + ft);
-		
+
 		return true;
 
 	}

@@ -7,7 +7,9 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.scheduling.quartz.SpringBeanJobFactory;
 
 /**
+ * <p>
  * Configuration to enable quartz bean autowiring
+ * </p>
  * 
  * @author Pardeep
  *

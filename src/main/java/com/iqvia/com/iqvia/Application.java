@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
+ * <p>
  * Application root
+ * </p>
  * 
  * @author Pardeep
  *
