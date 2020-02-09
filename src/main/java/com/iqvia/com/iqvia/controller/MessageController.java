@@ -1,6 +1,5 @@
 package com.iqvia.com.iqvia.controller;
 
-import org.quartz.SchedulerException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
