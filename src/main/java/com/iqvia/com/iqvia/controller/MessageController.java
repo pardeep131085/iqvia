@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.iqvia.com.iqvia.modal.MessageInput;
@@ -17,13 +18,14 @@ import com.iqvia.com.iqvia.service.MessageService;
  *
  */
 
+@RequestMapping(path = "/messages")
 @RestController
 public class MessageController {
 
 	@Autowired
 	private MessageService messageService;
 
-	@PostMapping(path = "/schedule-message", produces = "application/json", consumes = "application/json")
+	@PostMapping(path = "/schedule", produces = "application/json", consumes = "application/json")
 	public HttpStatus scheduleMessage(@RequestBody MessageInput input) {
 
 		try {

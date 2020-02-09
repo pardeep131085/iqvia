@@ -35,8 +35,6 @@ public class MessageServiceImpl implements MessageService {
 
 		LocalDateTime dateTime = LocalDateTime.parse(timestamp);
 		Date date = Date.from(dateTime.atZone(ZoneId.systemDefault()).toInstant());
-//		JobDetail detail = JobBuilder.newJob(MessageJob.class).withIdentity("messageSchJob")
-//				.withDescription("This is message Schedule Job").build();
 
 		Trigger trigger = TriggerBuilder.newTrigger().usingJobData(AppConstants.MESSAGE, content)
 				.usingJobData(AppConstants.TIME, date.toString()).forJob(detailFactoryBean.getObject())
