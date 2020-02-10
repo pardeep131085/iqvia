@@ -31,7 +31,7 @@
 		 -  message schedule time which is specific date time format
 		 - message content
  
- URL - http://localhost:8080/schedule-message
+ API URI - http://localhost:8080/messages/schedule
 
     {
 	"timestamp":"2020-02-08T21:46:00",
